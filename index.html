@@ -5,7 +5,14 @@
 		<title>Linux命令</title>
 	</head>
 	<body>
-		<h1>Docker</h1>
+		<h1>在Centos7上安装Docker</h1>
 		<p>1，root账户登录，查看内核版本如下 uname -a</p>
+		<p>2，把yum包更新到最新 yum update</p>
+		<p>3，安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p>
+		<p>4，设置yum源（选择其中一个）
+			<p>yum-config-manager --add-repo http://download.docker.com/linux/centos/docker-ce.repo（中央仓库）</p>
+			<p>yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo（阿里仓库）</p>
+		</p>
+		<p>4，可以查看所有仓库中所有docker版本，并选择特定版本安装yum list docker-ce --showduplicates | sort -r</p>
 	</body>
 </html>
